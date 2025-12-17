@@ -1,0 +1,19 @@
+.album-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 56px;
+}
+
+.album-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.album-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

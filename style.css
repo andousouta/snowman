@@ -1,0 +1,368 @@
+/* =========================
+  ✅ 全体設定
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-image: url("bg.jpg");
+  background-repeat: repeat;
+  color: #080808;
+}
+
+/* =========================
+  ✅ ヘッダー
+========================= */
+.header {
+  background-color: #fcfcfd;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  border: 2px solid #fcfdfe;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.header img {
+  width: 390px;
+  height:130px;  /* ← 好きなサイズに */  /* 縦横比を維持 */
+}
+
+/* =========================
+  ✅ セクション共通
+========================= */
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  background-color: rgba(251, 251, 252, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(220, 199, 199, 0.1);
+  border: 2px solid #ddd;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+h1 {
+  color: #f5f6f7;
+  border-bottom: 5px solid #02f733;
+  padding-bottom: 0.5rem;
+  font-size: 30px;
+}
+h2 {
+  color: #066ef5;
+  border-bottom: 5px solid #037cfe;
+  padding-bottom: 0.5rem;
+  font-size: 30px;
+}
+
+h5 {
+  color: #0703f5;
+  border-bottom: 5px solid #0279f9;
+  font-size: 28px;
+}
+
+/* =========================
+  ✅ メンバーリスト
+========================= */
+.member-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  border: 2px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.member1,.member2,.member3,.member4,.member5,
+.member6,.member7,.member8,.member9 {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: 2px solid #333;
+}
+
+.member1 { background:#c4f307; }
+.member2 { background:#c606f6; }
+.member3 { background:#f1f1f1; }
+.member4 { background:#585bf1; }
+.member5 { background:#f96e04; }
+.member6 { background:#05f230; }
+.member7 { background:#120f0f; color:white; }
+.member8 { background:#ff0606; }
+.member9 { background:#f5379c; }
+
+.member1 img, .member2 img, .member3 img, .member4 img,
+.member5 img, .member6 img, .member7 img, .member8 img, .member9 img {
+  max-width: 75%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* =========================
+  ✅ 楽曲 横スクロール
+========================= */
+.song-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.song-list li {
+  min-width: 600px;
+  list-style: none;
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.song-list img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+/* =========================
+  ✅ YouTube 中央配置
+========================= */
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.video-container iframe {
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+/* =========================
+  ✅ フッター
+========================= */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #333;
+  color: #fff;
+  border-top: 2px solid #555;
+}
+
+.slideshow {
+  width: 100%;
+  height: 360px;   /* ← 300px → 360px に拡大 */
+  overflow: hidden;
+  position: relative;
+  margin: 40px auto;
+  border-radius: 24px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+}
+
+.slide-track img {
+  width: 360px;   /* ← 300 → 360 に拡大 */
+  height: 350px;  /* ← 240 → 280 に拡大 */
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(360px * 10); /* ← 画像10枚分 */
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-1800px); } /* 360px × 5枚 */
+}
+
+
+
+/* ✅ 各ムービー */
+.movie-track iframe {
+  width: 460px;
+  height: 300px;
+  margin-right: 20px;
+  border-radius: 15px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.movie-auto-scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 40px auto;
+  padding: 10px 0;
+  background: #f2f2f2;
+  border-radius: 15px;
+  -webkit-overflow-scrolling: touch;
+  position: relative;   
+}
+
+.movie-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.6s ease;
+}
+.movie-track iframe {
+  width: 360px;
+  height: 200px;
+  border-radius: 15px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+@media (max-width: 768px) {
+  .movie-track iframe {
+    width: 280px;
+    height: 160px;
+  }
+}
+
+.carousel-viewport {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+  width: 100%;
+  max-width: 900px;
+  height: 300px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* 矢印 */
+.arrow {
+  pointer-events: auto;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  font-size: 32px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
+
+/* ドット */
+.dots {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: gray;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: black;
+}
+
+/* ✅ ハンバーガーボタン */
+.menu-btn {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 1001;
+  background: black;
+  color: white;
+  font-size: 26px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ✅ ドロワーメニュー本体 */
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  transform: translateX(-100%);
+  transition: 0.4s ease;
+  z-index: 1000;
+}
+
+/* ✅ 表示状態 */
+.drawer.active {
+  transform: translateX(0);
+}
+
+/* ✅ 閉じるボタン */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* ✅ メニュー中身 */
+.drawer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 120px;
+  margin-left: 60px;
+}
+
+.drawer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.back-btn:hover {
+  opacity: 0.8;
+}
+/* ✅ ハンバーガーメニュー内の戻るボタン */
+.menu-back-btn {
+  margin-top: 40px;
+  background: none;
+  border: 2px solid white;
+  color: white;
+  font-size: 20px;
+  padding: 10px 30px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.menu-back-btn:hover {
+  background: white;
+  color: black;
+}

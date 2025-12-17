@@ -1,0 +1,122 @@
+/* ==== INFO セクション ==== */
+#info {
+  background: #000;     /* 背景を黒 */
+  color: #ffffff;        /* 文字白 */
+  padding: 40px 20px;
+  width: 100%;           /* 画面幅いっぱい */
+  max-width: none;       /* 幅制限解除 */
+  margin: 0;             /* 自動センタリング解除 */
+  box-sizing: border-box;
+}
+
+
+#info h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #fff;          /* 見出しも白 */
+}
+
+/* リスト全体 */
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* 各項目 */
+.info-item {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #666;
+  color: #fff;           /* ← 文章白 */
+}
+
+/* 日付部分 */
+.info-date {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;          /* ← 白に */
+}
+/* NEWバッジ */ 
+.info-new { display: inline-block; 
+    background: #ff3c85; color: white; 
+    font-size: 14px; padding: 4px 10px; 
+    border-radius: 20px; margin-bottom: 8px;
+ }
+
+/* 文章 */
+.info-item p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff;          /* ← 白 */
+}
+
+/* グレー背景の強調（スクショのやつ） */
+.info-item.highlight {
+  background: #111;     /* 黒に近いグレー */
+  padding: 20px;
+  border-radius: 8px;
+  color: #f7f4f4;
+}
+
+/* ==== NEWS セクションも黒で統一 ==== */
+
+.news-section {
+    background: #000;
+    padding: 20px;
+    border-top: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.news-item {
+    background: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 110px;
+    padding: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.news-date {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.news-text {
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.news-item.highlight {
+    background: #111;
+    border-radius: 6px;
+}
+
+header .container {
+    background: #fff;  /* ←これが邪魔することが多い */
+}
+nav {
+    background: #000;
+}
+    .back-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 10px 20px;
+      border: 1px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .back-btn:hover {
+      background: #fff;
+      color: #000;
+    }

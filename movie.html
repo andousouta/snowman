@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>MOVIE </title>
+
+<style>
+body {
+    background: #000;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+/* ===== MOVIE動画 2列レイアウト ===== */
+#movie {
+    padding: 40px 20px;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie-grid iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 8px;
+}
+
+/* ===== スマホは1列 ===== */
+@media (max-width: 768px) {
+    .movie-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<section id="movie">
+  <h2 class="movie-title">MOVIE</h2>
+
+
+  <div class="movie-grid">
+    <iframe src="https://www.youtube.com/embed/ufc54RdoitM" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/P8dE79olI98" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/RzRlenQT5dk" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/mqx7oe22jf8" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/N5XEjJXJoDQ" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/PlTOzTQTpCQ" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/C9Ykam2hUs0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/tNrNzF6xVN8" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/LZW4zUmE0qY" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/5qqAjaOAX90" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/i-PnC1tYnGM" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/pSp2AAGB27M" allowfullscreen></iframe>
+  </div>
+
+</section>
+<div >
+  <a href="index.html" class="back-btn">← HOMEへ戻る</a>
+</div>
+
+
+</body>
+</html>
